@@ -1,11 +1,11 @@
 # Cadastro de lanches e cafés.
 ## Sistema para cadastro de recebimento de refeições.
 Obs: esse projeto foi feito para cadastrar refeições e faz parte de um conjunto de sistemas que irão fornecer dados para um mesmo banco de dados, 
-para que pudessem estar numa mesma tabela colocamos os mesmos atributos neles _cod,qtd,tipo,data e hora_, sendo o atributo cod fixado sempre em 9999999999
+para que pudessem estar numa mesma tabela colocamos os mesmos atributos neles _cod,qtd,tipo,data e hora_, sendo o atributo cod fixado sempre em 9999999999.
 
 O código feito tem como objetivo:
 * Cadastrar o refeições em um arquivo .txt para ser enviado para um db posteriormente.
-* gerar um relatório .txt com as seguintes informações.
+* Gerar um relatório .txt com as seguintes informações.
     1. Código sempre fixado no mesmo valor de 9999999999
     2. Qunatidade de refeições que são obtidos por uma entry.
     3. Tipo:
@@ -14,14 +14,13 @@ O código feito tem como objetivo:
         * Lanche hora extra.
     4. Data.
     5. Hora.
-* enviar o arquivo para o google drive e para o email.
+* Enviar o arquivo para o google drive e para o email.
 
 ### Código.
-O código nesse caso sempre será um valor fixo ou seja uma constrante apenas com o objetivo de preencher a tabela do db
+O código nesse caso sempre será um valor fixo ou seja uma constrante apenas com o objetivo de preencher a tabela do db.
 
 ### Quantidade.
-A quantidade é captada por meio da entry e armazenada na variavél qtd, logo após testa-se o tipo da variavél com o metodo isnumeric() retornando um valor boleano para a variavél qtdc,
- se o valor for verdadeiro o código entra no if.
+A quantidade é captada por meio da entry e armazenada na variavél qtd, logo após testa-se o tipo da variavél com o metodo isnumeric() retornando um valor boleano para a variavél qtdc, se o valor for verdadeiro o código entra no if.
 
 ~~~python
 qtdc = qtd.get().isnumeric()    #testa se o valor do text box é um valor numerico e retorna um valor boleano para variavel
@@ -54,11 +53,11 @@ else:
 qtd.delete(0 , END) 
 ~~~
 
-Após a execução do código limpa o valor do entry
+Após a execução do código limpa o valor do entry.
 
 ### Tipo.
 O tipo é pego pelo combobox e armazenado na variavél "tipo" através do linha `tipo = combobox.get()`,
-qee depois é gravado no "Relatorio.wes"
+qee depois é gravado no "Relatorio.wes".
 
 ~~~python
 tipo = combobox.get()
@@ -84,7 +83,7 @@ import time
 hora = str(time.strftime("%H:%M:%S"))
 ~~~
 
-Após isto é gravada no arquivo .txt: `dados.writelines(hora + '\n')`
+Após isto é gravada no arquivo .txt: `dados.writelines(hora + '\n')`.
 
 ## Relatórios.
 
@@ -96,7 +95,7 @@ Podemos separar a funcionalidade dessa função em 5 etapas:
 4. Envia o arquivo por email com o modulo email.
 5. Apaga o arquivo que ficou na pasta inícial.
 
-#### código:
+#### Código:
 
 ~~~python
 def relatoriobackupCL():
@@ -146,4 +145,4 @@ def relatoriobackupCL():
 ~~~
 
 
-# em suma é isso, obrigado por ler sobre meu código, se possivel me siga e favorite meus commits <3
+# Em suma é isso, obrigado por ler sobre meu código, se possivel me siga e favorite meus commits <3
