@@ -141,7 +141,7 @@ def relatoriobackupCL():
                 Message(top2 , text=Menssagem2 ,bg='#eef0f2', padx=50 , pady=50).pack()
                 top2['bg'] = '#eef0f2'
                 top2.geometry('250x150+630+400')
-                top2.after(espera2 , top2.destroy)  #caixa de texto que se auto destroí
+                top2.after(espera2 , top2.destroy)  
 ~~~
 
 
